@@ -1,0 +1,22 @@
+{
+  "name": "anagha-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio website for Anagha C R",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "vite": "5.0.0"
+  }
+}
