@@ -74,10 +74,10 @@ export default function Projects() {
     <section id="projects" className="section container">
       <h2>Projects</h2>
 
-      <div style={{ display: "grid", gap: 12 }}>
+      <div className="stack">
         {projects.map((p) => (
           <div key={p.name} className="card project">
-            <div style={{ flex: 1 }}>
+            <div className="project-content">
               <h3>{p.name}</h3>
 
               <p className="small">{p.description}</p>

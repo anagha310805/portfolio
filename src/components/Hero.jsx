@@ -8,7 +8,7 @@ export default function Hero(){
           <h2 className="hero-title">ANAGHA C R</h2>
           <div className="hero-sub">BCA (AI Specialization)</div>
           <p className="small">BCA graduate specializing in AI, with hands-on experience in data analytics, Python, SQL, Excel, and Power BI. Skilled in data cleaning, exploratory analysis, and dashboard development. Seeking an entry-level IT role to apply technical and analytical skills.</p>
-          <div className="hero-ctas" style={{marginTop:16}}>
+          <div className="hero-ctas">
             <a className="btn primary" href="#projects">View Projects</a>
             <a className="btn" href={"Anagha_CR_Resume.pdf"} target="_blank" rel="noreferrer">Download Resume</a>
             <a className="btn" href="https://github.com/anagha310805" target="_blank" rel="noreferrer">GitHub</a>

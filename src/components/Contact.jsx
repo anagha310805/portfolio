@@ -4,7 +4,7 @@ export default function Contact(){
   return (
     <section id="contact" className="section container">
       <h2>Contact</h2>
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
+      <div className="contact-grid">
         <div className="card">
           <h4>Get in touch</h4>
           <p className="small">Email: <a href="mailto:anagacty@gmail.com">anagacty@gmail.com</a></p>
@@ -15,7 +15,7 @@ export default function Contact(){
         <div className="card">
           <h4>Resume</h4>
           <p className="small">View or download the original resume (PDF).</p>
-          <div style={{display:'flex',gap:8}}>
+          <div className="resume-actions">
             <a className="btn" href={"Anagha_CR_Resume.pdf"} target="_blank" rel="noreferrer">View Resume</a>
             <a className="btn" href={"Anagha_CR_Resume.pdf"} download>Download Resume</a>
           </div>

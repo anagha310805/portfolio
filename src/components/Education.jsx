@@ -10,7 +10,7 @@ export default function Education(){
   return (
     <section id="education" className="section container">
       <h2>Education</h2>
-      <div style={{display:'grid',gap:12}}>
+      <div className="stack">
         {education.map(e=> (
           <div className="card" key={e.degree}>
             <h4>{e.degree}</h4>

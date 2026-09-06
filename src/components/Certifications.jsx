@@ -10,7 +10,7 @@ export default function Certifications(){
   return (
     <section id="certifications" className="section container">
       <h2>Certifications & Courses</h2>
-      <div style={{display:'grid',gap:12}}>
+      <div className="stack">
         {certs.map(c=> (
           <div className="card" key={c.name}>
             <h4>{c.name}</h4>

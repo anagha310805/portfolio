@@ -36,7 +36,7 @@ export default function Skills(){
   return (
     <section id="skills" className="section container">
       <h2>Skills</h2>
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:12}}>
+      <div className="skills-grid">
         {Object.entries(skills).map(([k,v])=> (
           <div className="card" key={k}>
             <h4>{k}</h4>
