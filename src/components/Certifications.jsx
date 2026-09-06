@@ -3,6 +3,7 @@ import React from "react";
 const certs = [
   {name:'Artificial Intelligence Analyst', org:'IBM', date:'2024'},
   {name:'Introduction to AI', org:'Simplilearn', date:'2025'},
+  {name:'Flutter & Dart', org:'Cursa', date:null},
   {name:'Data Analytics (Internship Certification)', org:'SMEC Technologies', date:null}
 ]
 

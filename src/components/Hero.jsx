@@ -7,7 +7,7 @@ export default function Hero(){
         <div className="card">
           <h2 className="hero-title">ANAGHA C R</h2>
           <div className="hero-sub">BCA (AI Specialization)</div>
-          <p className="small">BCA graduate specializing in AI, with hands-on experience in data analytics, Python, SQL, Excel, and Power BI. Skilled in data cleaning, exploratory analysis, and dashboard development. Seeking an entry-level IT role to apply technical and analytical skills.</p>
+          <p className="small">BCA graduate specializing in Artificial Intelligence, with hands-on experience in software development and data analytics. Skilled in Python, SQL, React, Flask, Flutter, Dart, MySQL, Power BI, and Excel. Experienced in building practical applications such as a Job Application Tracker and a Flutter-based Smart Expense Tracker, with a focus on responsive interfaces, backend integration, data management, and analytics. Passionate about developing user-focused software solutions and turning data into meaningful insights.</p>
           <div className="hero-ctas">
             <a className="btn primary" href="#projects">View Projects</a>
             <a className="btn" href={"Anagha_CR_Resume.pdf"} target="_blank" rel="noreferrer">Download Resume</a>
