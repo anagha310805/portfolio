@@ -11,7 +11,10 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("portfolio-theme") || "light");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    return ["midnight", "violet", "rose"].includes(savedTheme) ? savedTheme : "midnight";
+  });
 
   useEffect(() => {
     localStorage.setItem("portfolio-theme", theme);

@@ -6,9 +6,9 @@ const links = [
 ];
 
 const themes = [
-  { id: "light", icon: "☀️", label: "LIGHT" },
-  { id: "dark", icon: "🌙", label: "DARK" },
-  { id: "aurora", icon: "✨", label: "AURORA" },
+  { id: "midnight", icon: "◈", label: "MIDNIGHT" },
+  { id: "violet", icon: "◆", label: "VIOLET" },
+  { id: "rose", icon: "●", label: "ROSE" },
 ];
 
 export default function Nav({ theme, onThemeChange }) {
@@ -42,7 +42,7 @@ export default function Nav({ theme, onThemeChange }) {
           <div className="dot" aria-hidden="true">AC</div>
           <div><h1>Anagha C R</h1><div className="brand-subtitle">BCA (AI Specialization)</div></div>
         </a>
-        <div className={`theme-switcher theme-${theme}`} role="group" aria-label="Choose a color theme">
+        <div className={`theme-switcher theme-${theme}`} role="group" aria-label="Choose a colour theme">
           {themes.map(({ id, icon, label }) => (
             <button
               key={id}
