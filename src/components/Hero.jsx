@@ -15,9 +15,8 @@ export default function Hero(){
           </div>
         </div>
         <div className="profile-wrap">
-          <div className="profile-pic card">
+          <div className="profile-pic">
             <img src={"profile.jpg.jpeg"} alt="Profile photo of Anagha C R" />
-            <div className="profile-glow" aria-hidden></div>
           </div>
         </div>
       </div>
