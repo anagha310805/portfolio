@@ -52,9 +52,16 @@ export default function Projects() {
               <p><strong>Purpose / Problem solved:</strong> {project.note}</p>
               <p><strong>Key features:</strong></p>
               <ul>{project.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-              <p><strong>Technologies:</strong> {project.tech.join(", ")}</p>
-              {project.github && <p><a href={project.github} target="_blank" rel="noreferrer">GitHub Repository</a></p>}
-              {project.live && <p><a href={project.live} target="_blank" rel="noreferrer">Live demo</a></p>}
+              <div className="project-technologies">
+                <strong>Technologies</strong>
+                <div className="skills-list">
+                  {project.tech.map((tech) => <span className="skill-badge" key={tech}>{tech}</span>)}
+                </div>
+              </div>
+              {(project.github || project.live) && <div className="project-actions">
+                {project.github && <a className="btn project-link" href={project.github} target="_blank" rel="noreferrer">GitHub Repository</a>}
+                {project.live && <a className="btn project-link" href={project.live} target="_blank" rel="noreferrer">Live demo</a>}
+              </div>}
             </div>
           </div>
         ))}

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 const links = [
-  { title: "Home", href: "#home" }, { title: "About", href: "#about" },
-  { title: "Skills", href: "#skills" }, { title: "Projects", href: "#projects" },
-  { title: "Education", href: "#education" }, { title: "Experience", href: "#experience" },
-  { title: "Certifications", href: "#certifications" }, { title: "Contact", href: "#contact" },
+  { title: "Home", href: "#home" }, { title: "Projects", href: "#projects" },
+  { title: "Contact", href: "#contact" }, { title: "Education", href: "#education" },
 ];
 
 export default function Nav() {
