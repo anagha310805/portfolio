@@ -9,12 +9,14 @@ import Experience from "./components/Experience";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Journey from "./components/Journey";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("portfolio-theme");
     return ["midnight", "violet", "rose"].includes(savedTheme) ? savedTheme : "midnight";
   });
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     localStorage.setItem("portfolio-theme", theme);
@@ -43,8 +45,23 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const updateProgress = () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0);
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  }, []);
+
   return (
     <div className="app-root" data-theme={theme}>
+      <div className="scroll-progress" aria-hidden="true" style={{ transform: `scaleX(${scrollProgress / 100})` }} />
       <Nav theme={theme} onThemeChange={setTheme} />
       <main>
         <Hero />
@@ -53,6 +70,7 @@ export default function App() {
         <Projects />
         <Education />
         <Experience />
+        <Journey />
         <Certifications />
         <Contact />
       </main>

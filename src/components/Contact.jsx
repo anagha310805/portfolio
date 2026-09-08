@@ -3,10 +3,11 @@ import React from "react";
 export default function Contact(){
   return (
     <section id="contact" className="section container">
+      <p className="section-kicker">Contact</p>
       <h2>Contact</h2>
       <div className="contact-grid">
         <div className="card">
-          <h4>Contact details</h4>
+          <h4>Let&apos;s build something meaningful.</h4>
           <p className="small">Email: <a href="mailto:anagacty@gmail.com">anagacty@gmail.com</a></p>
           <p className="small">Phone: +91 9037462782</p>
           <p className="small">Location: Thrissur, Kerala</p>
