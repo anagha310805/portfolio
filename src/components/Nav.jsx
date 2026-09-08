@@ -5,7 +5,13 @@ const links = [
   { title: "Contact", href: "#contact" }, { title: "Education", href: "#education" },
 ];
 
-export default function Nav() {
+const themes = [
+  { id: "light", icon: "☀️", label: "LIGHT" },
+  { id: "dark", icon: "🌙", label: "DARK" },
+  { id: "aurora", icon: "✨", label: "AURORA" },
+];
+
+export default function Nav({ theme, onThemeChange }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("#home");
 
@@ -36,6 +42,19 @@ export default function Nav() {
           <div className="dot" aria-hidden="true">AC</div>
           <div><h1>Anagha C R</h1><div className="brand-subtitle">BCA (AI Specialization)</div></div>
         </a>
+        <div className={`theme-switcher theme-${theme}`} role="group" aria-label="Choose a color theme">
+          {themes.map(({ id, icon, label }) => (
+            <button
+              key={id}
+              type="button"
+              className={`theme-button ${theme === id ? "is-active" : ""}`}
+              aria-pressed={theme === id}
+              onClick={() => onThemeChange(id)}
+            >
+              <span aria-hidden="true">{icon}</span><span className="theme-label">{label}</span>
+            </button>
+          ))}
+        </div>
         <button className={`menu-toggle ${menuOpen ? "is-open" : ""}`} type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen((open) => !open)}>
           <span></span><span></span><span></span>
         </button>
